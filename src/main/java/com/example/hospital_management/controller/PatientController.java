@@ -20,13 +20,13 @@ public class PatientController {
         return patientService.savePatient(patient);
     }
 
-    // GET: Retrieve all patients
+
     @GetMapping
     public List<Patient> getAllPatients() {
         return patientService.getAllPatients();
     }
 
-    // GET: Retrieve a patient by ID
+
     @GetMapping("/{id}")
     public Patient getPatientById(@PathVariable Long id) {
         return patientService.getPatientById(id);
