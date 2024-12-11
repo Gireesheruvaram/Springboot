@@ -12,3 +12,4 @@ public class PatientDTO {
     private String ailment;
     private Long doctorId;
 }
+''
