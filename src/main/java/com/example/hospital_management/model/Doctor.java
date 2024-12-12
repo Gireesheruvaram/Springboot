@@ -22,8 +22,8 @@ public class Doctor {
     private String specialization;
 
     // One-to-many relationship with Patient
-    @OneToMany(mappedBy = "doctor", fetch = FetchType.EAGER)  // Set FetchType.EAGER if you need patients to be loaded automatically
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctor", fetch = FetchType.EAGER)  // Set FetchType.EAGER if you need patients to be loaded automatically
 //    @JsonManagedReference  // To avoid infinite recursion
-    @JsonIgnoreProperties("doctor")
+//    @JsonIgnoreProperties("doctor")
     private List<Patient> patients;
 }

@@ -19,10 +19,10 @@ public class Patient {
     private String ailment;
 
     // Many-to-one relationship with Doctor
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "doctor_id")
 //    @JsonBackReference  // Prevents infinite recursion during JSON serialization
-    @JsonIgnoreProperties("patients")
+//    @JsonIgnoreProperties("patients")
     private Doctor doctor;
 }
 //
