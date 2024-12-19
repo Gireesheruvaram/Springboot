@@ -50,9 +50,10 @@ public class PatientService {
     }
 
     // Delete a Patient by ID
-    public void deletePatient(Long id) {
+    public boolean deletePatient(Long id) {
         Patient patient = patientRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException(PATIENT_NOT_FOUND_MESSAGE + id));
         patientRepository.delete(patient);
+        return false;
     }
 }

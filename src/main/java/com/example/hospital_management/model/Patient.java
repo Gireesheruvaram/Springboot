@@ -1,6 +1,6 @@
 package com.example.hospital_management.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +22,7 @@ public class Patient {
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "doctor_id")
 //    @JsonBackReference  // Prevents infinite recursion during JSON serialization
-//    @JsonIgnoreProperties("patients")
+
     private Doctor doctor;
 }
 //

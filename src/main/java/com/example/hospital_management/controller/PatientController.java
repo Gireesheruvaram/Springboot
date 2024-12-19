@@ -5,6 +5,7 @@ import com.example.hospital_management.model.Doctor;
 import com.example.hospital_management.model.Patient;
 import com.example.hospital_management.service.DoctorService;
 import com.example.hospital_management.service.PatientService;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.example.hospital_management.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -24,6 +24,6 @@ public class Doctor {
     // One-to-many relationship with Patient
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "doctor", fetch = FetchType.EAGER)  // Set FetchType.EAGER if you need patients to be loaded automatically
 //    @JsonManagedReference  // To avoid infinite recursion
-//    @JsonIgnoreProperties("doctor")
+
     private List<Patient> patients;
 }

@@ -41,7 +41,7 @@ public class DoctorService {
 
         existingDoctor.setName(doctorDetails.getName());
         existingDoctor.setSpecialization(doctorDetails.getSpecialization());
-        // You can also update other fields here
+
 
         return doctorRepository.save(existingDoctor);
     }
